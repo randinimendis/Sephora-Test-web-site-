@@ -14,5 +14,10 @@ describe("template spec", () => {
     cy.get('input[placeholder="Email Address"]')
       .should("be.visible")
       .type("randini@gmail.com");
+
+    // Fill Phone Number field
+    cy.get('input[placeholder="Phone Number"]')
+      .should("be.visible")
+      .type("+94761037727");
   });
 });
