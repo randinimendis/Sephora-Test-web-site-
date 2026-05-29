@@ -4,5 +4,10 @@ describe("template spec", () => {
 
     // Scroll to contact form
     cy.get("form").scrollIntoView();
+
+    // Fill Name field
+    cy.get('input[placeholder="Your Name"]')
+      .should("be.visible")
+      .type("Randini Mendis");
   });
 });
