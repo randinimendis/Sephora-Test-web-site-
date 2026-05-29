@@ -19,5 +19,12 @@ describe("template spec", () => {
     cy.get('input[placeholder="Phone Number"]')
       .should("be.visible")
       .type("+94761037727");
+
+    // Fill Message field
+    cy.get('textarea[placeholder="Your Message"]')
+      .should("be.visible")
+      .type(
+        "Hello, I would like to get more information about your safety services.",
+      );
   });
 });
