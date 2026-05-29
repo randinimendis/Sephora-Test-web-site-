@@ -9,5 +9,10 @@ describe("template spec", () => {
     cy.get('input[placeholder="Your Name"]')
       .should("be.visible")
       .type("Randini Mendis");
+
+    // Fill Email field
+    cy.get('input[placeholder="Email Address"]')
+      .should("be.visible")
+      .type("randini@gmail.com");
   });
 });
