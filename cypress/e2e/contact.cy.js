@@ -36,5 +36,16 @@ describe("template spec", () => {
 
     // Pause test for manual CAPTCHA verification
     cy.pause();
+
+    // Verify CAPTCHA checked
+    cy.iframe('iframe[title="reCAPTCHA"]')
+      .find("#recaptcha-anchor", { timeout: 10000 })
+      .should("have.attr", "aria-checked", "true");
+
+    // Submit form
+    cy.get("form").submit();
+
+    // Verify success message
+    cy.contains("successfully", { timeout: 15000 }).should("be.visible");
   });
 });
