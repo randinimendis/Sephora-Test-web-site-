@@ -1,3 +1,6 @@
+// import iframe support
+import "cypress-iframe";
+
 describe("template spec", () => {
   it("passes", () => {
     cy.visit("https://safora.se/en/contact.html");
@@ -26,5 +29,12 @@ describe("template spec", () => {
       .type(
         "Hello, I would like to get more information about your safety services.",
       );
+
+    // Click reCAPTCHA checkbox
+    cy.frameLoaded('iframe[title="reCAPTCHA"]');
+    cy.iframe('iframe[title="reCAPTCHA"]').find("#recaptcha-anchor").click();
+
+    // Pause test for manual CAPTCHA verification
+    cy.pause();
   });
 });
