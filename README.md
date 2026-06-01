@@ -1,6 +1,7 @@
 # Sephora Website Testing Project 🛍️
 ---
-
+💡 Handling reCAPTCHA (Semi-Automation)
+Since reCAPTCHA cannot be easily automated, use Semi-Automation by pausing the script, solving it manually, and resuming.
 # ✅ Part 2 — Automation Script Submission
 ---
 
